@@ -126,14 +126,14 @@ func (c *SAPAPICaller) AsyncGetFunctionalLocation(functionalLocation, functional
 ```
 
 ## Output  
-本マイクロサービスでは、[golang-logging-library](https://github.com/latonaio/golang-logging-library) により、以下のようなデータがJSON形式で出力されます。  
+本マイクロサービスでは、[golang-logging-library-for-sap](https://github.com/latonaio/golang-logging-library-for-sap) により、以下のようなデータがJSON形式で出力されます。  
 以下の sample.json の例は、SAP 機能場所 の ヘッダ が取得された結果の JSON の例です。  
 以下の項目のうち、"FunctionalLocation" ～ "CreationDate" は、/SAP_API_Output_Formatter/type.go 内 の Type Header {} による出力結果です。"cursor" ～ "time"は、golang-logging-library による 定型フォーマットの出力結果です。  
 
 ```
 {
-	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-functional-location-reads-rmq-kube/SAP_API_Caller/caller.go#L58",
-	"function": "sap-api-integrations-functional-location-reads-rmq-kube/SAP_API_Caller.(*SAPAPICaller).Header",
+	"cursor": "/Users/latona2/bitbucket/sap-api-integrations-functional-location-reads/SAP_API_Caller/caller.go#L58",
+	"function": "sap-api-integrations-functional-location-reads/SAP_API_Caller.(*SAPAPICaller).Header",
 	"level": "INFO",
 	"message": [
 		{
@@ -207,9 +207,9 @@ func (c *SAPAPICaller) AsyncGetFunctionalLocation(functionalLocation, functional
 			"FuncnlLocIsDeleted": false,
 			"FunctionalLocationIsActive": true,
 			"FuncnlLocIsDeactivated": false,
-			"CreationDate": "/Date(1466726400000)/"
+			"CreationDate": "2016-06-24T09:00:00+09:00"
 		}
 	],
-	"time": "2022-01-06T17:00:29.978908+09:00"
+	"time": "2022-01-28T16:52:14+09:00"
 }
 ```
